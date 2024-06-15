@@ -1,11 +1,10 @@
+const cartUpdateBtn = document.getElementById("cartUpdateBtn")
+const cardContainer = document.querySelectorAll(".cardContainer")
+const countUpdate = document.getElementById("countUpdate")
 
-const cartContainer = document.getElementById("cartContainer")
-const cartUpdateBtn = document.querySelectorAll("#cartUpdateBtn")
+let countNumber = []
+countUpdate.innerHTML = countNumber.length
 
-// cartContainer.forEach((_,indexNo)=>{
-//     let spanCountElement = document.createElement("span")
-//     spanCountElement.innerHTML = indexNo
-//     spanCountElement.style.color = "red"
-//     cartContainer 
-// })
-
+cartUpdateBtn.addEventListener("click",function () {
+    countUpdate.innerHTML = countNumber.push(cardContainer)
+})
