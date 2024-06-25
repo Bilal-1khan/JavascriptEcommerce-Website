@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: system-ui;
     text-decoration: none;
+    list-style: none;
 }
 body{
     background-color: rgb(65, 67, 69);
@@ -28,6 +29,40 @@ nav{
 .cart i{
     font-size: 1.5rem;
 }
+.dropDown{
+    display: none;
+    color: red;
+    border: 1px solid red;
+    border-radius: .5rem;
+    padding: 1rem;
+    margin-top: 1rem;
+    position: absolute;
+    right: 10px;
+    top: 53px;
+    width: 270px;
+    height: 270px;
+    overflow-y: scroll;
+}
+.dropDown::-webkit-scrollbar{
+    display: none;
+}
+.displayBlock{
+    display: block;
+}
+.cartlist-items img{
+    width: 30px;
+}
+.cartlist-items{
+    padding:.8rem .4rem;
+    margin: .4rem 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.cart-img,.cart-img img{
+    width: 30px;
+    height: 30px;
+}
 main{
     display: flex;
     flex-wrap: wrap;
@@ -37,7 +72,6 @@ main{
     padding: 1.8rem 2rem;
 }
 .cardContainer{
-    /* margin: 1rem 4rem; */
     border:1px solid black;
     width: 300px;
 }

@@ -6,6 +6,7 @@
     <title>Cart Counter</title>
     <link rel="stylesheet" href="app.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <div class="mainContainer">
@@ -14,17 +15,23 @@
             <nav>
                 <div class="main-heading"><a href="#">Cart Update</a></div>
                 <div class="cart" id="cartContainer">
-                    <i class="fa-solid fa-cart-shopping"><span id="countUpdate"></span></i>
+                    <i class="fa-solid fa-cart-shopping" id="dropDownBtn"><span id="countUpdate"></span></i>
+                    <div class="dropDown " id="dropDownList">
+                        <ul id="ulBox">
+                        </ul>
+                    </div>
                 </div>
+                
             </nav>
          </header>
+         <!-- main -->
          <main>
-            <div class="cardContainer">
+            <div class="cardContainer" data-product-name="product1">
                 <div class="image">
                     <img src="https://www.wahlpro.com/media/catalog/product/b/a/baldingclipper-hero-3000x3000-min.jpg?optimize=medium&fit=bounds&height=700&width=700&canvas=700:700" alt="">
                 </div>
                 <div class="decription">
-                    <p>The best clipper</p>
+                    <p class="productName">The best clipper</p>
                     <p class="price"><span style="color: red; font-size: 23px;">2000</span> <span style="font-size: 13px;">PKR</span></p>
 
                     <div class="btns">
@@ -33,12 +40,12 @@
                     </div>
                 </div>
             </div>
-            <!-- <div class="cardContainer">
+            <div class="cardContainer" data-product-name="product2">
                 <div class="image">
                     <img src="https://www.wahlpro.com/media/catalog/product/b/a/baldingclipper-hero-3000x3000-min.jpg?optimize=medium&fit=bounds&height=700&width=700&canvas=700:700" alt="">
                 </div>
                 <div class="decription">
-                    <p>The best clipper</p>
+                    <p class="productName">The best clipper</p>
                     <p class="price"><span style="color: red; font-size: 23px;">2000</span> <span style="font-size: 13px;">PKR</span></p>
 
                     <div class="btns">
@@ -47,12 +54,12 @@
                     </div>
                 </div>
             </div>
-            <div class="cardContainer">
+            <div class="cardContainer" data-product-name="product3">
                 <div class="image">
                     <img src="https://www.wahlpro.com/media/catalog/product/b/a/baldingclipper-hero-3000x3000-min.jpg?optimize=medium&fit=bounds&height=700&width=700&canvas=700:700" alt="">
                 </div>
                 <div class="decription">
-                    <p>The best clipper</p>
+                    <p class="productName">The best clipper</p>
                     <p class="price"><span style="color: red; font-size: 23px;">2000</span> <span style="font-size: 13px;">PKR</span></p>
 
                     <div class="btns">
@@ -61,12 +68,12 @@
                     </div>
                 </div>
             </div>
-            <div class="cardContainer">
+            <div class="cardContainer" data-product-name="product4">
                 <div class="image">
                     <img src="https://www.wahlpro.com/media/catalog/product/b/a/baldingclipper-hero-3000x3000-min.jpg?optimize=medium&fit=bounds&height=700&width=700&canvas=700:700" alt="">
                 </div>
                 <div class="decription">
-                    <p>The best clipper</p>
+                    <p class="productName">The best clipper</p>
                     <p class="price"><span style="color: red; font-size: 23px;">2000</span> <span style="font-size: 13px;">PKR</span></p>
 
                     <div class="btns">
@@ -74,7 +81,7 @@
                         <button class="cartBtn btn" id="cartUpdateBtn"><i class="fa-solid fa-cart-shopping"></i></button>
                     </div>
                 </div>
-            </div> -->
+            </div>
          </main>
          
     </div>
