@@ -63,23 +63,38 @@ nav{
     width: 30px;
     height: 30px;
 }
+.searchBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0px;
+}
+.searchBox input{
+    width: 50%;
+    padding: .8rem .7rem;
+    font-size: 1rem;
+    border-radius: .8rem;
+    outline: none;
+    border: none;
+}
 main{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin: 1rem .8rem;
+    margin: 1rem .3rem;
     gap: .4rem;
-    padding: 1.8rem 2rem;
+    padding: 1.8rem 1rem;
 }
 .cardContainer{
     border:1px solid black;
     width: 300px;
 }
 .image{
-    max-width: 300px;
+ height: 300px;
 }
 .image img{
     width: 100%;
+    height: 100%;
 }
 .decription{
     padding: 1rem .6rem;
