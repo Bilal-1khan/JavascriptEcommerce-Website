@@ -19,6 +19,7 @@
                     <div class="dropDown " id="dropDownList">
                         <ul id="ulBox">
                         </ul>
+                        <span class="viewCart"><a href="viewCart.html">View Cart</a></span>
                     </div>
                 </div>
                 
@@ -26,16 +27,17 @@
          </header>
          <!-- input search items -->
          <div class="searchBox">
-            <input type="text" placeholder="Search...">
+            <input type="text" placeholder="Search..." id="searchFilter">
         </div>
          <!-- main -->
-         <main>
+         <main id="mainDiv">
             <div class="cardContainer" data-product-name="product1">
                 <div class="image">
                     <img src="https://www.wahlpro.com/media/catalog/product/b/a/baldingclipper-hero-3000x3000-min.jpg?optimize=medium&fit=bounds&height=700&width=700&canvas=700:700" alt="">
                 </div>
                 <div class="decription">
                     <p class="productName">The best clipper</p>
+                    <p class="productDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <p class="price"><span style="color: red; font-size: 23px;">2000</span> <span style="font-size: 13px;">PKR</span></p>
 
                     <div class="btns">
@@ -50,6 +52,7 @@
                 </div>
                 <div class="decription">
                     <p class="productName">Canon Camera</p>
+                    <p class="productDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <p class="price"><span style="color: red; font-size: 23px;">2000</span> <span style="font-size: 13px;">PKR</span></p>
 
                     <div class="btns">
@@ -64,6 +67,7 @@
                 </div>
                 <div class="decription">
                     <p class="productName">Perfume</p>
+                    <p class="productDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <p class="price"><span style="color: red; font-size: 23px;">2000</span> <span style="font-size: 13px;">PKR</span></p>
 
                     <div class="btns">
@@ -78,6 +82,127 @@
                 </div>
                 <div class="decription">
                     <p class="productName">Nikon Camera</p>
+                    <p class="productDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="price"><span style="color: red; font-size: 23px;">2000</span> <span style="font-size: 13px;">PKR</span></p>
+
+                    <div class="btns">
+                        <button class="Preview btn">Preview</button>
+                        <button class="cartBtn btn" id="cartUpdateBtn"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="cardContainer" data-product-name="product1">
+                <div class="image">
+                    <img src="https://www.wahlpro.com/media/catalog/product/b/a/baldingclipper-hero-3000x3000-min.jpg?optimize=medium&fit=bounds&height=700&width=700&canvas=700:700" alt="">
+                </div>
+                <div class="decription">
+                    <p class="productName">The best clipper</p>
+                    <p class="productDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="price"><span style="color: red; font-size: 23px;">2000</span> <span style="font-size: 13px;">PKR</span></p>
+
+                    <div class="btns">
+                        <button class="Preview btn">Preview</button>
+                        <button class="cartBtn btn" id="cartUpdateBtn"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="cardContainer" data-product-name="product2">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                </div>
+                <div class="decription">
+                    <p class="productName">Canon Camera</p>
+                    <p class="productDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="price"><span style="color: red; font-size: 23px;">2000</span> <span style="font-size: 13px;">PKR</span></p>
+
+                    <div class="btns">
+                        <button class="Preview btn">Preview</button>
+                        <button class="cartBtn btn" id="cartUpdateBtn"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="cardContainer" data-product-name="product3">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/258244/pexels-photo-258244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                </div>
+                <div class="decription">
+                    <p class="productName">Perfume</p>
+                    <p class="productDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="price"><span style="color: red; font-size: 23px;">2000</span> <span style="font-size: 13px;">PKR</span></p>
+
+                    <div class="btns">
+                        <button class="Preview btn">Preview</button>
+                        <button class="cartBtn btn" id="cartUpdateBtn"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="cardContainer" data-product-name="product4">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/3907507/pexels-photo-3907507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                </div>
+                <div class="decription">
+                    <p class="productName">Nikon Camera</p>
+                    <p class="productDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="price"><span style="color: red; font-size: 23px;">2000</span> <span style="font-size: 13px;">PKR</span></p>
+
+                    <div class="btns">
+                        <button class="Preview btn">Preview</button>
+                        <button class="cartBtn btn" id="cartUpdateBtn"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="cardContainer" data-product-name="product1">
+                <div class="image">
+                    <img src="https://www.wahlpro.com/media/catalog/product/b/a/baldingclipper-hero-3000x3000-min.jpg?optimize=medium&fit=bounds&height=700&width=700&canvas=700:700" alt="">
+                </div>
+                <div class="decription">
+                    <p class="productName">The best clipper</p>
+                    <p class="productDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="price"><span style="color: red; font-size: 23px;">2000</span> <span style="font-size: 13px;">PKR</span></p>
+
+                    <div class="btns">
+                        <button class="Preview btn">Preview</button>
+                        <button class="cartBtn btn" id="cartUpdateBtn"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="cardContainer" data-product-name="product2">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/90946/pexels-photo-90946.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                </div>
+                <div class="decription">
+                    <p class="productName">Canon Camera</p>
+                    <p class="productDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="price"><span style="color: red; font-size: 23px;">2000</span> <span style="font-size: 13px;">PKR</span></p>
+
+                    <div class="btns">
+                        <button class="Preview btn">Preview</button>
+                        <button class="cartBtn btn" id="cartUpdateBtn"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="cardContainer" data-product-name="product3">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/258244/pexels-photo-258244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                </div>
+                <div class="decription">
+                    <p class="productName">Perfume</p>
+                    <p class="productDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                    <p class="price"><span style="color: red; font-size: 23px;">2000</span> <span style="font-size: 13px;">PKR</span></p>
+
+                    <div class="btns">
+                        <button class="Preview btn">Preview</button>
+                        <button class="cartBtn btn" id="cartUpdateBtn"><i class="fa-solid fa-cart-shopping"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="cardContainer" data-product-name="product4">
+                <div class="image">
+                    <img src="https://images.pexels.com/photos/3907507/pexels-photo-3907507.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="">
+                </div>
+                <div class="decription">
+                    <p class="productName">Nikon Camera</p>
+                    <p class="productDescription">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                     <p class="price"><span style="color: red; font-size: 23px;">2000</span> <span style="font-size: 13px;">PKR</span></p>
 
                     <div class="btns">

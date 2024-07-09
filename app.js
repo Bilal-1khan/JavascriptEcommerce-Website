@@ -2,6 +2,7 @@
 const cartUpdateBtn = document.querySelectorAll(".cartBtn");
 const countUpdate = document.getElementById("countUpdate");
 let cardContainers = document.querySelectorAll(".cardContainer");
+console.log(cardContainers.length);
 
 // cart dropdown functionality
 const dropDownBtn = document.getElementById("dropDownBtn");
@@ -25,10 +26,13 @@ cartUpdateBtn.forEach((curElem) => {
 let cardImgData = [];
 let cardProductData = [];
 const ulBox = document.getElementById("ulBox");
+
 // cart data update in list
 cartUpdateBtn.forEach((curBtnEle, index) => {
   curBtnEle.addEventListener("click", function () {
+
     let cartListItems = document.createElement("li");
+    cartListItems.classList.add("cartlist-items");
 
     let cardContainerElem = cardContainers[index];
     let productImage = cardContainerElem.querySelector(".image img");
@@ -37,10 +41,10 @@ cartUpdateBtn.forEach((curBtnEle, index) => {
     cardImgData.push(productImage.getAttribute("src"));
     cardProductData.push(productName);
 
-    cartListItems.innerHTML = `<img src="${cardImgData[index]}" alt="Product Image" style="width:50px;height:50px;"> 
+    cartListItems.innerHTML = 
+    `<img src="${cardImgData[index]}" alt="Product Image" style="width:50px;height:50px;border-radius:8px;"> 
       <span>${cardProductData[index]}</span>
       <span><i id="deleteCartData" class="fa-solid fa-xmark"></i></span>`;
-    cartListItems.classList.add("cartlist-items");
 
     // delete list
     let deleteData = cartListItems.querySelector("#deleteCartData");
@@ -54,7 +58,15 @@ cartUpdateBtn.forEach((curBtnEle, index) => {
   });
 });
 
-// const testingArray = [1,2,3,4,5,6,7,8,9,10]
 
-// testingArray.push(11,12)
-// console.log(testingArray);
+// search card data
+const searchFilter = document.querySelector("#searchFilter")
+searchFilter.addEventListener("keyup",function (e) {
+  const itemsFilter = document.querySelectorAll(".productName")
+  console.log(e.key);
+  
+  for (let i = 0; i < itemsFilter.length; i++) {
+    console.log(itemsFilter);
+    console.log(i);
+  }
+})
