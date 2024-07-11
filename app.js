@@ -2,7 +2,6 @@
 const cartUpdateBtn = document.querySelectorAll(".cartBtn");
 const countUpdate = document.getElementById("countUpdate");
 let cardContainers = document.querySelectorAll(".cardContainer");
-console.log(cardContainers.length);
 
 // cart dropdown functionality
 const dropDownBtn = document.getElementById("dropDownBtn");
@@ -60,13 +59,32 @@ cartUpdateBtn.forEach((curBtnEle, index) => {
 
 
 // search card data
-const searchFilter = document.querySelector("#searchFilter")
-searchFilter.addEventListener("keyup",function (e) {
-  const itemsFilter = document.querySelectorAll(".productName")
-  console.log(e.key);
+// const searchFilter = document.querySelector("#searchFilter")
+// searchFilter.addEventListener("keyup",function (e) {
+//   const itemsFilter = document.querySelectorAll(".productName")
+//   console.log(itemsFilter);
+//   for (let i = 0; i < cardContainers.length; i++) {
+//     console.log(cardContainers);
+//   }
+// })
+
+// const itemsFilter = document.querySelectorAll(".productName")
+// let cardContainersArrayFilter = Array.from(cardContainers)
+// console.log(cardContainersArrayFilter.filter((search)=>(search.includes(itemsFilter)))); 
+
+function searchFilterData() {
+  const searchFilter = document.getElementById("searchFilter").value.toUpperCase()
+  const productDetails = document.getElementsByClassName("decription")
+  let cardsData = cardContainers
   
-  for (let i = 0; i < itemsFilter.length; i++) {
-    console.log(itemsFilter);
-    console.log(i);
+  for (let i = 0; i < productDetails.length; i++) {
+    let itemsTextData = productDetails[i].firstElementChild
+    let textDataValue = itemsTextData.innerHTML || itemsTextData.innerText || itemsTextData.textContent 
+
+      if (textDataValue.toUpperCase().indexOf(searchFilter) > -1) {
+        cardsData[i].style.display = ''
+      } else {
+        cardsData[i].style.display = 'none'
+      }
   }
-})
+}
