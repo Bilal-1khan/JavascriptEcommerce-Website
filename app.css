@@ -31,7 +31,7 @@
 body{
     background-color: rgb(65, 67, 69);
 }
-header{
+header,footer{
     background-color: black;
     padding:1rem ;
 }
@@ -158,4 +158,58 @@ main{
     padding: .5rem 1.2rem;
     border-radius: 8px;
     cursor: pointer;
+}
+/* modal box */
+.productModalDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background:rgba(0, 0, 0, 0.628) ;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+.popupClose{
+    font-size: 2rem;
+    color: red;
+    float: right;
+    cursor: pointer;
+}
+.productModal{
+    width: 50%;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: #fff;
+    border-radius: 8px;
+    padding: .9rem .89rem;
+}
+#itemsCountNum{
+    color: black;
+    font-size: 1.2rem;
+}
+/* footer */
+.topFooter{
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+}
+.topFooter a{
+    color: #fff;
+}
+.btmFooter{
+    text-align: center;
+    color: #fff;
+    margin-top: 3rem;
+    background-color: #555;
+    padding: 1rem;
+    border-radius: 8px;
 }

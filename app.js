@@ -1,5 +1,6 @@
 // global variables
 const cartUpdateBtn = document.querySelectorAll(".cartBtn");
+const cartPreviewBtn = document.querySelectorAll(".Preview")
 const countUpdate = document.getElementById("countUpdate");
 let cardContainers = document.querySelectorAll(".cardContainer");
 
@@ -57,21 +58,7 @@ cartUpdateBtn.forEach((curBtnEle, index) => {
   });
 });
 
-
-// search card data
-// const searchFilter = document.querySelector("#searchFilter")
-// searchFilter.addEventListener("keyup",function (e) {
-//   const itemsFilter = document.querySelectorAll(".productName")
-//   console.log(itemsFilter);
-//   for (let i = 0; i < cardContainers.length; i++) {
-//     console.log(cardContainers);
-//   }
-// })
-
-// const itemsFilter = document.querySelectorAll(".productName")
-// let cardContainersArrayFilter = Array.from(cardContainers)
-// console.log(cardContainersArrayFilter.filter((search)=>(search.includes(itemsFilter)))); 
-
+// search items
 function searchFilterData() {
   const searchFilter = document.getElementById("searchFilter").value.toUpperCase()
   const productDetails = document.getElementsByClassName("decription")
@@ -88,3 +75,38 @@ function searchFilterData() {
       }
   }
 }
+
+// preview items
+const itemModal = document.querySelector(".productModalDiv")
+const itemModalDetails = document.querySelector(".productModal")
+const itemModalData = itemModalDetails.querySelector(".productModalData")
+const closeModal = document.querySelector(".popupClose")
+let itemsCounterNum = 0
+
+cartPreviewBtn.forEach((previewCart,itemsIndex)=>{
+  const productImages = cardContainers[itemsIndex].querySelector('.image img').src
+  const itemsDescription = cardContainers[itemsIndex].querySelector(".productDescription").innerText
+  
+  itemModalData.innerHTML =`
+  <img src=${productImages} alt="image" style="max-width:200px;width:100%;border-radius:8px;"/> 
+  <div>
+  ${itemsDescription}
+  </div>
+  <div class='incrDcrBTN'>
+  <button id="minus" style="padding:.5rem 1rem;background-color:black;color:#fff;cursor:pointer;font-size:1.2rem;border:none;">-</button>
+  <span id='itemsCountNum'></span>
+  <button id="plus" style="padding:.5rem 1rem;background-color:black;color:#fff;cursor:pointer;font-size:1.2rem;border:none;">+</button>
+  </div>
+  `
+  
+
+  
+
+  previewCart.addEventListener("click",function () {
+    itemModal.style.display="block"
+  })
+  closeModal.addEventListener("click",function () {
+    itemModal.style.display="none"
+  })
+  // itemModal.innerHTML=productImages
+})
